@@ -1,7 +1,6 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
-const clipboardy = require('clipboardy');
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -25,7 +24,7 @@ function activate(context) {
 			const parts = name.split('.');
 			const noExt = parts[0];
 			
-			clipboardy.writeSync(noExt);
+			vscode.env.clipboard.writeText(noExt);
 			vscode.window.setStatusBarMessage(`Copied '${noExt}' to the clipboard.`);
 		} catch (err) {
 			vscode.window.showErrorMessage(err.message);
@@ -36,7 +35,7 @@ function activate(context) {
 		try {
 			const name = getName(uri);
 			
-			clipboardy.writeSync(name);
+			vscode.env.clipboard.writeText(name);
 			vscode.window.setStatusBarMessage(`Copied '${name}' to the clipboard.`);
 		} catch (err) {
 			vscode.window.showErrorMessage(err.message);

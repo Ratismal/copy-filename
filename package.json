@@ -2,7 +2,7 @@
 	"name": "copy-filename-from-menu",
 	"displayName": "Copy Filename From Menu",
 	"description": "Copies filenames from menus",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"engines": {
 		"vscode": "^1.34.0"
 	},
@@ -33,18 +33,22 @@
 		"menus": {
 			"explorer/context": [
 				{
-					"command": "extension.copyFilename"
+					"command": "extension.copyFilename",
+					"group": "6_copypath@31"
 				},
 				{
-					"command": "extension.copyFilenameNoExt"
+					"command": "extension.copyFilenameNoExt",
+					"group": "6_copypath@31"
 				}
 			],
 			"editor/title/context": [
 				{
-					"command": "extension.copyFilename"
+					"command": "extension.copyFilename",
+					"group": "1_cutcopypaste@2"
 				},
 				{
-					"command": "extension.copyFilenameNoExt"
+					"command": "extension.copyFilenameNoExt",
+					"group": "1_cutcopypaste@2"
 				}
 			]
 		}
@@ -60,7 +64,5 @@
 		"typescript": "^3.3.1",
 		"vscode": "^1.1.28"
 	},
-	"dependencies": {
-		"clipboardy": "^2.0.0"
-	}
+	"dependencies": {}
 }
