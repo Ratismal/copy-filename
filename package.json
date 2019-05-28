@@ -2,11 +2,14 @@
 	"name": "copy-filename-from-menu",
 	"displayName": "Copy Filename From Menu",
 	"description": "Copies filenames from menus",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.34.0"
 	},
-	"repository": {"type": "git", "url": "https://github.com/Ratismal/copy-filename"},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Ratismal/copy-filename"
+	},
 	"publisher": "ratismal",
 	"categories": [
 		"Other"
